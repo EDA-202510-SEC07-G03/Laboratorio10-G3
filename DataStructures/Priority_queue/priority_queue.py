@@ -34,14 +34,14 @@ def priority(my_heap, parent, child):
     return False
 
 def swim(my_heap, pos):
-    elements = my_heap["elements"]
+    elements = my_heap["elements"]["elements"]
     proceed = True
     while proceed and pos > 1:
         parent_pos = pos // 2
-        parent = my_heap["elements"][parent_pos]
-        child = my_heap["elements"][pos]
+        parent = elements[parent_pos]
+        child = elements[pos]
         if priority(my_heap, parent, child):
-            al.exchange(elements, parent_pos, pos)
+            al.exchange(my_heap["elements"], parent_pos, pos)
             pos = parent_pos
         else:
             proceed = False

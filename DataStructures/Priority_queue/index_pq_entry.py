@@ -1,3 +1,4 @@
+
 def new_pq_entry(key, index):
     """
     Crea una nueva entrada (de tipo :ref:`index_pq_entry<index-priority-queue-entry>`) de una cola de prioridad.
